@@ -7,25 +7,30 @@
 </head>
 <body>
 
+    <!-- Formulario de contacto -->
+    <!-- metodo get envia la informacion por la url y post no-->
+    <form action="#" method="post"> <!-- action y method son atributos obligatorios -->
+       
 
-    <form action="#" method="post">
+        <fieldset> <!-- agrupa elementos relacionados del formulario -->
 
-        <fieldset>
-            <legend> Datos personales </legend>
+            <legend> Datos personales </legend> <!-- titulo del grupo -->
+
+            <label for="nombre"> Nombre completo:  </label> <!-- for vincula el label con el input -->
 
             
-            <label for="nombre"> Nombre completo:  </label>
-
+             <!-- atributos obligatorios en los input: type, id, name -->
             <input 
-                type="text" 
+                type="text"    
                 id="nombre" 
                 name="nombre"
                 placeholder=" Escribe tu nombre"
-                required
-            ><br><br>
+                required  
+            ><br><br> <!-- placeholder texto que aparece dentro del input -->
 
-            <label for="correo"> Correo Electronico:  </label>
+            <label for="correo"> Correo Electronico:  </label> <!-- for vincula el label con el input -->
 
+            <!-- atributos obligatorios en los input: type, id, name -->
             <input 
                 type="email" 
                 id="correo" 
@@ -34,8 +39,9 @@
                 required
             ><br><br>
 
-            <label for="edad"> Edad:  </label>
+            <label for="edad"> Edad:  </label> <!-- for vincula el label con el input -->
 
+            <!-- atributos obligatorios en los input: type, id, name -->
             <input 
                 type="number" 
                 id="edad" 
@@ -43,20 +49,28 @@
                 min="10"
                 max="90"
             ><br><br>
-        </fieldset>
+        </fieldset> <!-- fin del grupo -->
 
-        <fieldset>
-            <legend> Mensaje </legend>
+        <fieldset> <!-- nuevo grupo -->
+            <legend> Mensaje </legend> <!-- titulo del grupo -->
 
-            <label for="asunto "> Asunto:  </label>
-            <select id="asunto" name="asunto">
-                <option value="">Seleciona opcion</option>
-                <option value="consulta">Consulta</option>
-                <option value="soporte">Soporte</option>
-                <option value="comentario">Comentario</option>
-            </select>
+            <label for="asunto "> Asunto:  </label> <!-- for vincula el label con el select -->
+           
+            <select id="asunto" name="asunto"> <!-- atributos obligatorios en el select: id, name -->
+           
+                <option value="">Seleciona opcion</option> <!-- value es el valor que se envia al servidor -->
+           
+                <option value="consulta">Consulta</option> <!-- value es el valor que se envia al servidor -->
+           
+                <option value="soporte">Soporte</option> <!-- value es el valor que se envia al servidor -->
+           
+                <option value="comentario">Comentario</option> <!-- value es el valor que se envia al servidor -->
+           
+            </select> <!-- fin del select -->
 
-            <label for="mensaje"> Mensaje:  </label><br>
+            <label for="mensaje"> Mensaje:  </label><br> <!-- for vincula el label con el textarea -->
+            
+            <!-- atributos obligatorios en el textarea: id, name -->
             <textarea
                 id="mensaje" 
                 name="mensaje" 
@@ -64,13 +78,17 @@
                 maxlength="300"
                 placeholder=" Escribe tu mensaje"
             >
-            </textarea>
-        </fieldset>
+            </textarea> <!-- fin del textarea -->
+            
+        </fieldset> <!-- fin del grupo -->
+        
         <br>
 
-        <button type="submit"> Enviar </button>
-        <button type="reset"> Limpiar formulario</button>
+        <!-- botones del formulario -->
+        <button type="submit"> Enviar </button> <!-- boton para enviar el formulario -->
+        <button type="reset"> Limpiar formulario</button> <!-- boton para limpiar el formulario -->
 
-    </form>    
+    </form>  <!-- fin del formulario -->
+
 </body>
 </html>
